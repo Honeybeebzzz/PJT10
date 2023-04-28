@@ -3,8 +3,10 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
+<%-- String menu= request.getParameter("menu"); --%>
 <html>
 <head>
+<meta charset="EUC-KR">
 <title>상품상세조회</title>
 
 <link rel="stylesheet" href="/css/admin.css" type="text/css">

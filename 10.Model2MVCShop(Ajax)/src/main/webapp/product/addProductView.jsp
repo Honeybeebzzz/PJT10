@@ -14,13 +14,7 @@
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 
-//=====기존Code 주석 처리 후  jQuery 변경 ======//
 function fncAddProduct(){
-	//Form 유효성 검증
- 	//var name = document.detailForm.prodName.value;
-	//var detail = document.detailForm.prodDetail.value;
-	//var manuDate = document.detailForm.manuDate.value;
-	//var price = document.detailForm.price.value;
 
 	var name = $("input[name='prodName']").val();
 	var detail = $("input[name='prodDetail']").val();
@@ -44,12 +38,8 @@ function fncAddProduct(){
 		alert("가격은 반드시 입력하셔야 합니다.");
 		return;
 	}
-
-	//document.detailForm.action='/product/addProduct';
-	//document.detailForm.submit();
 	$("form").attr("method","POST").attr("action", "/product/addProduct").attr("enctype","multipart/form-data").submit();
 }
-
 //===========================================//
 //==> 추가된부분 : "등록"  Event 연결
  $(function() {
@@ -79,7 +69,6 @@ function fncAddProduct(){
 	
 	$(function () {
 		$("#cal").on("click", function () {
-			//alert("눌렀다");
 			show_calendar('document.detailForm.manuDate', document.detailForm.manuDate.value);
 		});
 		
@@ -200,9 +189,6 @@ function fncAddProduct(){
 					<img src="/images/ct_btnbg01.gif" width="17" height="23"/>
 				</td>
 				<td background="/images/ct_btnbg02.gif" class="ct_btn01"  style="padding-top: 3px;">
-				<!-- ////////////////// jQuery Event 처리로 변경됨 ///////////////////////// 
-					<a href="javascript:fncAddProduct();">등록</a>
-					////////////////////////////////////////////////////////////////////////////////////////////////// -->
 				    등록
 				</td>
 				<td width="14" height="23">
@@ -213,9 +199,6 @@ function fncAddProduct(){
 					<img src="/images/ct_btnbg01.gif" width="17" height="23"/>
 				</td>
 				<td background="/images/ct_btnbg02.gif" class="ct_btn01"	 style="padding-top: 3px;">
-				<!-- ////////////////// jQuery Event 처리로 변경됨 ///////////////////////// 
-					<a href="javascript:resetData();">취소</a>
-					////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			     	취소
 				</td>
 				<td width="14" height="23">
